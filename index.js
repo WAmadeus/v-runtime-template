@@ -37,7 +37,7 @@ export default {
 
       const methodKeys = Object.keys($options.methods || {});
       const allKeys = getKeysFromOptions($options).concat(methodKeys);
-      const methods = buildFromProps(this.$parent, methodKeys);
+      const methods = buildFromProps(this.$parent.$parent, methodKeys);
       const props = merge([$data, $props, methods]);
 
       const dynamic = {

@@ -45,7 +45,7 @@ var index = {
 
       var methodKeys = Object.keys($options.methods || {});
       var allKeys = getKeysFromOptions($options).concat(methodKeys);
-      var methods = buildFromProps(this.$parent, methodKeys);
+      var methods = buildFromProps(ref, methodKeys);
       var props = merge([$data, $props, methods]);
 
       var dynamic = {
