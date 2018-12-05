@@ -33,7 +33,7 @@ export default {
   },
   render(h) {
     if (this.template) {
-      const { $data, $props, $options } = this.$parent;
+      const { $data, $props, $options } = this.$parent.$parent;
 
       const methodKeys = Object.keys($options.methods || {});
       const allKeys = getKeysFromOptions($options).concat(methodKeys);
