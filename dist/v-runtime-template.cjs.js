@@ -38,7 +38,7 @@ var index = {
   },
   render: function render(h) {
     if (this.template) {
-      var ref = this.$parent;
+      var ref = this.$parent.$parent;
       var $data = ref.$data;
       var $props = ref.$props;
       var $options = ref.$options;
